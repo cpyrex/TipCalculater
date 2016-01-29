@@ -132,12 +132,12 @@
             android:padding="10dp" />
 
     <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="100sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/roundingRadioGroup"
         android:layout_alignEnd="@+id/billAmountEditText"
         android:layout_alignTop="@+id/separatorLine"
-        android:layout_toEndOf="@+id/billAmountLabel">
+        android:layout_toEndOf="@+id/percentTextView">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -171,12 +171,38 @@
 
         android:layout_below="@id/roundingRadioGroup"
         android:padding="10dp" />
+
     <Spinner android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/splitSpinner"
-        >
+
+        android:layout_below="@+id/roundingRadioGroup"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/roundingRadioGroup">
 
     </Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/perPersonLabel"
+        android:text="Per Person"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/splitSpinner"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/perPersonTextView"
+        android:text="$0.00"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/splitSpinner"
+        android:layout_alignStart="@+id/splitSpinner" />
 
 </RelativeLayout>
 
